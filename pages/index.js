@@ -1,12 +1,17 @@
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
-import Link from "next/link";
 
 export default function Home() {
   return (
     <div className={styles.container}>
-    
+      <style jsx>
+      {`
+      h2{
+        padding:10px;
+      }
+      `
+      }</style>
     
       <Head>
         <title>CodderHunts</title>
@@ -14,20 +19,11 @@ export default function Home() {
         <meta name="keyword" content="cooder hunts , nextjs, code Problem" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-     <nav className={styles.mainnav}>
-     <ul>
-    <Link href=" /"><a ><li>Home</li></a></Link> 
-    <Link href="about"><a ><li>About </li></a></Link>
-    <Link href="blog"><a ><li>Blogs</li></a></Link>
-    <Link  href="contact"><a><li>Contact</li></a></Link>
-   
-     
-     
-     </ul>
-     </nav>
+      
 
       <main className={styles.main}>
         <h1 className={styles.title}> <span className="myspan">CodderHunts</span></h1>
+        <Image src="/javascript.jpg" alt="img cant cload" width={1240} height={460} className={styles.homeimg} />
 
         <p className={styles.description}>CodderHunts can solve your problem</p>
 
@@ -49,12 +45,12 @@ export default function Home() {
             {/*<Image src="https://unsplash.com/photos/i25aqE_YUZs" alt="image of javascript logo"/>*/}
           </div>
           <div className="blogItem">
-            <h1>How to learn javascript</h1>
+            <h3>How to learn javascript</h3>
             <p>Javascript is a language to design a web application</p>
             {/*<Image src="https://unsplash.com/photos/i25aqE_YUZs" alt="image of javascript logo"/>*/}
           </div>
           <div className="blogItem">
-            <h1>How to learn javascript</h1>
+            <h3>How to learn javascript</h3>
             <p>Javascript is a language to design a web application</p>
             {/*<Image src="https://unsplash.com/photos/i25aqE_YUZs" alt="image of javascript logo"/>*/}
           </div>
@@ -62,16 +58,7 @@ export default function Home() {
       </main>
 
       <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{" "}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a>
+        
       </footer>
     </div>
   );
