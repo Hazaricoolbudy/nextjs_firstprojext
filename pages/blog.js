@@ -1,9 +1,18 @@
-import React from "react";
+import React , {useEffect}from "react";
 import styles from "../styles/Blog.module.css";
 import Link from "next/link";
 const Blog = () => {
   //step 1 : collect all the files from blogdata directory  
   // step 2: iterate through them and display them
+  useEffect(()=>{
+    console.log('useeffect is running');
+    fetch('http://localhost:3000/api/blogs').then((a)=>{
+      a.then(data=>{
+        parsed=data.json()
+        console.log(parsed);
+      })
+    })
+  })
   return (
     <>
       <div className="blogs">
