@@ -20,7 +20,7 @@ const Slug = () => {
       });
 
 },[router.isReady])
-
+      
 
     
 
